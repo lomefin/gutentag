@@ -27,6 +27,6 @@ class Gutentag::Tag < ActiveRecord::Base
   end
   
   def generate_slug
-    self.slug = ((I18n.l Time.now, format: :standard)+" "+self.title).parameterize
+    self.slug = self.name.parameterize
   end
 end
