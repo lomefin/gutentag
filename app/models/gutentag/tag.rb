@@ -10,7 +10,7 @@ class Gutentag::Tag < ActiveRecord::Base
 
   validates :name, :presence => true, :uniqueness => {:case_sensitive => false}
   
-  before_validation :normalise_name, :generate_slug
+  before_validation :normalise_name
 
   def self.find_by_name(name)
     where(:name => Gutentag.normaliser.call(name)).first
