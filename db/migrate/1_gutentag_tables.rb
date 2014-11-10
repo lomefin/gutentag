@@ -19,6 +19,7 @@ class GutentagTables < ActiveRecord::Migration
     end
 
     add_index :gutentag_tags, :name, :unique => true
+    add_index :gutentag_tags, :slug, :unique => true
   end
 
   def down
