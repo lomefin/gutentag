@@ -24,6 +24,7 @@ class Gutentag::Tag < ActiveRecord::Base
 
   def normalise_name
     self.name = Gutentag.normaliser.call name
+    generate_slug
   end
   
   def generate_slug
