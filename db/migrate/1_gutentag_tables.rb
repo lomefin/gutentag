@@ -14,6 +14,7 @@ class GutentagTables < ActiveRecord::Migration
 
     create_table :gutentag_tags do |t|
       t.string :name, :null => false
+      t.string :slug, :null => false
       t.timestamps
     end
 
